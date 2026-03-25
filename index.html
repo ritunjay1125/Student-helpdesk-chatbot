@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Helpdesk Chatbot</title>
+</head>
+<body>
+
+  <h2>Student Helpdesk Chatbot</h2>
+  <p>This chatbot is built using IBM Watson Assistant.</p>
+
+  <!-- Watson Chatbot Script -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "YOUR_INTEGRATION_ID",
+      region: "YOUR_REGION",
+      serviceInstanceID: "YOUR_SERVICE_ID",
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
+</body>
+</html>
